@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import FunThings from './pages/FunThings/FunThings'
 import Landing from './pages/Landing/Landing'
+import DylansThings from './pages/DylansThings/DylansThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -129,6 +130,15 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+
+  const [dylansThings, setDylansThings] = useState([
+    {
+      name: "salads",
+      image: "https://imgs.xkcd.com/comics/functional.png",  
+      attributes: ["gross", "not good", "not a taco", "beautiful"],
+    },
+  ])
+
   const [piercesThings, setPiercesThings] = useState([
     {
       name: "Built Bar",
@@ -155,6 +165,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/dylans-things"
+        element={<DylansThings things={dylansThings} />}
       />
       <Route
         path="/the-fun-things"
