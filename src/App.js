@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import FunThings from './pages/FunThings/FunThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -128,7 +129,13 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
-
+  const [piercesThings, setPiercesThings] = useState([
+    {
+      name: "Built Bar",
+      image: "https://imgs.xkcd.com/comics/functional.png",  
+      attributes: ["caramel", "cookies and cream", "coconut", "coco puff"],
+    },
+  ])
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +155,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-fun-things"
+        element={<FunThings things={piercesThings} />}
       />
     </Routes>
   )
