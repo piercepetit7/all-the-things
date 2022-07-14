@@ -5,9 +5,11 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
-import FunThings from './pages/FunThings/FunThings'
+import RainThings from './pages/RainThings/RainThings'
 import Landing from './pages/Landing/Landing'
 import SportyThings from './pages/SportyThings.jsx/SportyThings'
+import DylansThings from './pages/DylansThings/DylansThings'
+import FunThings from './pages/FunThings/FunThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -144,6 +146,7 @@ const App = () => {
     }
   ])
 
+  
   const [piercesThings, setPiercesThings] = useState([
     {
       name: "Built Bar",
@@ -151,6 +154,24 @@ const App = () => {
       attributes: ["caramel", "cookies and cream", "coconut", "coco puff"],
     },
   ])
+
+
+  const [dylansThings, setDylansThings] = useState([
+    {
+      name: "salads",
+      image: "https://imgs.xkcd.com/comics/functional.png",  
+      attributes: ["gross", "not good", "not a taco", "beautiful"],
+    },
+  ])
+
+  const [ilyanasThings, setIlyanasThings] = useState([
+    {
+      name: "rain",
+      image: "https://imgs.xkcd.com/comics/rain.png",  
+      attributes: ["weather", "dark skies", "thunder", "maybe lightning"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -176,6 +197,14 @@ const App = () => {
         element={<SportyThings things={kathysThings} />}
       />
         <Route
+        path="/the-rain-things"
+        element={<RainThings things={ilyanasThings} />}
+      />
+      <Route
+        path="/dylans-things"
+        element={<DylansThings things={dylansThings} />}
+      />
+      <Route
         path="/the-fun-things"
         element={<FunThings things={piercesThings} />}
       />
