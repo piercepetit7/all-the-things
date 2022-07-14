@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import RainThings from './pages/RainThings/RainThings'
 import Landing from './pages/Landing/Landing'
+import SportyThings from './pages/SportyThings.jsx/SportyThings'
 import DylansThings from './pages/DylansThings/DylansThings'
 import FunThings from './pages/FunThings/FunThings'
 
@@ -131,6 +132,20 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+
+  const [kathysThings, setKathysThings] = useState([
+    {
+      name: "basketball",
+      image: "https://imgs.xkcd.com/comics/basketball.png",
+      attributes: ["fun", "healthy", "competitive"],
+    },
+    {
+      name: "soccer",
+      image: "https://imgs.xkcd.com/comics/soccer.png",
+      attributes: ["not fun", "boring", "nobody scores", "waste of hours of running"]
+    }
+  ])
+
   
   const [piercesThings, setPiercesThings] = useState([
     {
@@ -178,6 +193,10 @@ const App = () => {
         element={<SillyThings things={huntersThings} />}
       />
       <Route
+        path="/the-sporty-things"
+        element={<SportyThings things={kathysThings} />}
+      />
+        <Route
         path="/the-rain-things"
         element={<RainThings things={ilyanasThings} />}
       />
