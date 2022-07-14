@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import RainThings from './pages/RainThings/RainThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -128,6 +129,14 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+  
+  const [ilyanasThings, setIlyanasThings] = useState([
+    {
+      name: "rain",
+      image: "https://imgs.xkcd.com/comics/rain.png",  
+      attributes: ["weather", "dark skies", "thunder", "maybe lightning"],
+    },
+  ])
 
   return (
     <Routes>
@@ -148,6 +157,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-rain-things"
+        element={<RainThings things={ilyanasThings} />}
       />
     </Routes>
   )
